@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func hosthandler(w http.ResponseWriter, r *http.Request) {
+func hostHandler(w http.ResponseWriter, r *http.Request) {
 	name, err :=os.Hostname()
 
 	if err !=nil {

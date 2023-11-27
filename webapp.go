@@ -24,8 +24,7 @@ func hostHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
-
-	fmt.Fprintf(w, "<h1> Awesome site in Go!</h1><br>")
+	fmt.Fprintf(w, "<h1>Awesome site in Go!</h1><br>")
 	fmt.Fprintf(w, "<a href='/host/'>Host info</a><br>")
 }
 
@@ -34,6 +33,3 @@ func main() {
 	http.HandleFunc("/host/", hostHandler)
 	http.ListenAndServe(":8080", nil)
 }
-
-// Compile with:
-// env GOARCH=386 GOOS=linux go build webapp.go

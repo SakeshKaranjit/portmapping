@@ -7,9 +7,9 @@ import (
 )
 
 func hostHandler(w http.ResponseWriter, r *http.Request) {
-	name, err :=os.Hostname()
+	name, err := os.Hostname()
 
-	if err !=nil {
+	if err != nil {
 		panic(err)
 	}
 
